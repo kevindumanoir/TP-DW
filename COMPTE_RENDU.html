@@ -1,0 +1,1184 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>COMPTE_RENDU</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-tp-données-du-web--préambule" class="anchor" href="#tp-donn%C3%A9es-du-web--pr%C3%A9ambule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TP Données du Web : Préambule</h1>
+
+<p>Ce TP a été réalisé par <strong>Axel CÉARD</strong> et <strong>Kévin DUMANOIR</strong>, B3442, 3IF INSA Lyon 2016-2017.</p>
+
+<p>Voilà les fichiers concernés par chaque partie :</p>
+
+<ul>
+<li>Partie I : countries_TP.xml</li>
+<li>Partie II : countries_TP.xml, pays_du_monde_tableau_3IF.xsl, countries_TP.html</li>
+<li>Partie III : path : partie_3, fichiers : PartieAjaxDOM.html, calendar-short.xml, calendar-eventlist-workaholics.xsl, calendar-eventlist.xsl</li>
+</ul>
+
+<h1>
+<a id="user-content-partie-i--xml-dtd-xpath-xslt" class="anchor" href="#partie-i--xml-dtd-xpath-xslt" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Partie I : XML, DTD, XPath, XSLT</h1>
+
+<h2>
+<a id="user-content-1-exploration-de-linstance" class="anchor" href="#1-exploration-de-linstance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Exploration de l'instance</h2>
+
+<p>Pour la question 1, il s'agit de donner les expressions XPath, et quelques résultats, permettant de sélectionner les éléments demandés.</p>
+
+<h3>
+<a id="user-content-q11--tous-les-pays" class="anchor" href="#q11--tous-les-pays" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.1 : Tous les pays</h3>
+
+<blockquote>
+<p>/countries/country</p>
+</blockquote>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">country</span>&gt;
+        &lt;<span class="pl-ent">name</span>&gt;
+            &lt;<span class="pl-ent">common</span>&gt;Aruba&lt;/<span class="pl-ent">common</span>&gt;
+            &lt;<span class="pl-ent">official</span>&gt;Aruba&lt;/<span class="pl-ent">official</span>&gt;
+            &lt;<span class="pl-ent">native_name</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>nld<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">official</span>&gt;Aruba&lt;/<span class="pl-ent">official</span>&gt;
+                &lt;<span class="pl-ent">common</span>&gt;Aruba&lt;/<span class="pl-ent">common</span>&gt;
+            &lt;/<span class="pl-ent">native_name</span>&gt;
+            &lt;<span class="pl-ent">native_name</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>pap<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">official</span>&gt;Aruba&lt;/<span class="pl-ent">official</span>&gt;
+                &lt;<span class="pl-ent">common</span>&gt;Aruba&lt;/<span class="pl-ent">common</span>&gt;
+            &lt;/<span class="pl-ent">native_name</span>&gt;
+        &lt;/<span class="pl-ent">name</span>&gt;
+        &lt;<span class="pl-ent">tld</span>&gt;.aw&lt;/<span class="pl-ent">tld</span>&gt;
+        &lt;<span class="pl-ent">cca2</span>&gt;AW&lt;/<span class="pl-ent">cca2</span>&gt;
+        &lt;<span class="pl-ent">ccn3</span>&gt;533&lt;/<span class="pl-ent">ccn3</span>&gt;
+        &lt;<span class="pl-ent">cca3</span>&gt;ABW&lt;/<span class="pl-ent">cca3</span>&gt;
+        &lt;<span class="pl-ent">cioc</span>&gt;ARU&lt;/<span class="pl-ent">cioc</span>&gt;
+        &lt;<span class="pl-ent">currency</span>&gt;AWG&lt;/<span class="pl-ent">currency</span>&gt;
+        &lt;<span class="pl-ent">callingCode</span>&gt;297&lt;/<span class="pl-ent">callingCode</span>&gt;
+        &lt;<span class="pl-ent">capital</span>&gt;Oranjestad&lt;/<span class="pl-ent">capital</span>&gt;
+        &lt;<span class="pl-ent">altSpellings</span>&gt;AW&lt;/<span class="pl-ent">altSpellings</span>&gt;
+        &lt;<span class="pl-ent">region</span>&gt;Americas&lt;/<span class="pl-ent">region</span>&gt;
+        &lt;<span class="pl-ent">subregion</span>&gt;Caribbean&lt;/<span class="pl-ent">subregion</span>&gt;
+        &lt;<span class="pl-ent">languages</span>&gt;
+            &lt;<span class="pl-ent">nld</span>&gt;Dutch&lt;/<span class="pl-ent">nld</span>&gt;
+            &lt;<span class="pl-ent">pap</span>&gt;Papiamento&lt;/<span class="pl-ent">pap</span>&gt;
+        &lt;/<span class="pl-ent">languages</span>&gt;
+        &lt;<span class="pl-ent">latlng</span>&gt;12.5&lt;/<span class="pl-ent">latlng</span>&gt;
+        &lt;<span class="pl-ent">latlng</span>&gt;-69.96666666&lt;/<span class="pl-ent">latlng</span>&gt;
+        &lt;<span class="pl-ent">demonym</span>&gt;Aruban&lt;/<span class="pl-ent">demonym</span>&gt;
+        &lt;<span class="pl-ent">landlocked</span>&gt;false&lt;/<span class="pl-ent">landlocked</span>&gt;
+        &lt;<span class="pl-ent">area</span>&gt;180&lt;/<span class="pl-ent">area</span>&gt;
+    &lt;/<span class="pl-ent">country</span>&gt;</pre></div>
+
+<h3>
+<a id="user-content-q12--les-noms-officiels-des-pays" class="anchor" href="#q12--les-noms-officiels-des-pays" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.2 : Les noms officiels des pays</h3>
+
+<blockquote>
+<p>//name/official/text()</p>
+</blockquote>
+
+<p><strong>Note:</strong> Pour récupérer le node, enlever /text()</p>
+
+<pre><code>    Aruba
+    Islamic Republic of Afghanistan
+    Republic of Angola
+    Anguilla
+    Åland Islands
+</code></pre>
+
+<h3>
+<a id="user-content-q13--Éléments-ayant-au-moins-un-attribut" class="anchor" href="#q13--%C3%89l%C3%A9ments-ayant-au-moins-un-attribut" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.3 : Éléments ayant au moins un attribut</h3>
+
+<blockquote>
+<p>//*[@*]</p>
+</blockquote>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">native_name</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>nld<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">official</span>&gt;Aruba&lt;/<span class="pl-ent">official</span>&gt;
+    &lt;<span class="pl-ent">common</span>&gt;Aruba&lt;/<span class="pl-ent">common</span>&gt;
+&lt;/<span class="pl-ent">native_name</span>&gt;
+&lt;<span class="pl-ent">native_name</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>pap<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">official</span>&gt;Aruba&lt;/<span class="pl-ent">official</span>&gt;
+    &lt;<span class="pl-ent">common</span>&gt;Aruba&lt;/<span class="pl-ent">common</span>&gt;
+&lt;/<span class="pl-ent">native_name</span>&gt;
+&lt;<span class="pl-ent">native_name</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>prs<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">official</span>&gt;جمهوری اسلامی افغانستان&lt;/<span class="pl-ent">official</span>&gt;
+    &lt;<span class="pl-ent">common</span>&gt;افغانستان&lt;/<span class="pl-ent">common</span>&gt;
+&lt;/<span class="pl-ent">native_name</span>&gt;
+ &lt;<span class="pl-ent">native_name</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>pus<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">official</span>&gt;د افغانستان اسلامي جمهوریت&lt;/<span class="pl-ent">official</span>&gt;
+    &lt;<span class="pl-ent">common</span>&gt;افغانستان&lt;/<span class="pl-ent">common</span>&gt;
+&lt;/<span class="pl-ent">native_name</span>&gt;
+&lt;<span class="pl-ent">native_name</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>tuk<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">official</span>&gt;Owganystan Yslam Respublikasy&lt;/<span class="pl-ent">official</span>&gt;
+    &lt;<span class="pl-ent">common</span>&gt;Owganystan&lt;/<span class="pl-ent">common</span>&gt;
+&lt;/<span class="pl-ent">native_name</span>&gt;</pre></div>
+
+<h3>
+<a id="user-content-q14--les-noms-officiels-des-pays-en-français-pour-ceux-qui-en-ont" class="anchor" href="#q14--les-noms-officiels-des-pays-en-fran%C3%A7ais-pour-ceux-qui-en-ont" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.4 : Les noms officiels des pays en français pour ceux qui en ont</h3>
+
+<blockquote>
+<p>//country/name/native_name[@lang="fra"]/official/text()</p>
+</blockquote>
+
+<pre><code>Territoire des Terres australes et antarctiques françaises
+République du Burundi
+Royaume de Belgique
+République du Bénin
+République du Burkina
+</code></pre>
+
+<h3>
+<a id="user-content-q15--le-deuxième-nom-natif-officiel-des-pays" class="anchor" href="#q15--le-deuxi%C3%A8me-nom-natif-officiel-des-pays" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.5 : Le deuxième nom natif officiel des pays</h3>
+
+<blockquote>
+<p>//country/name/native_name[position()=2]/official/text()</p>
+</blockquote>
+
+<pre><code>Aruba
+República Argentina
+Sāmoa Amelika
+Republika y'Uburundi 
+Royaume de Belgique
+</code></pre>
+
+<h3>
+<a id="user-content-q16--les-noms-communs-des-pays-qui-nont-pas-de-nom-natif" class="anchor" href="#q16--les-noms-communs-des-pays-qui-nont-pas-de-nom-natif" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.6 : Les noms communs des pays qui n'ont pas de nom natif</h3>
+
+<blockquote>
+<p>//country/name[count(native_name)=0]/common/text()</p>
+</blockquote>
+
+<pre><code>Antarctica
+</code></pre>
+
+<h3>
+<a id="user-content-q17--les-noms-officiels-des-pays-ayant-plus-strict-de-9-voisins-borders" class="anchor" href="#q17--les-noms-officiels-des-pays-ayant-plus-strict-de-9-voisins-borders" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.7 : Les noms officiels des pays ayant plus (strict) de 9 voisins (borders)</h3>
+
+<blockquote>
+<p>//country[count(borders)&gt;9]/name/official/text()</p>
+</blockquote>
+
+<pre><code>Federative Republic of Brazil
+People's Republic of China
+Russian Federation
+</code></pre>
+
+<h3>
+<a id="user-content-q18--les-noms-officiels-des-pays-dont-la-capitale-commence-par-pa" class="anchor" href="#q18--les-noms-officiels-des-pays-dont-la-capitale-commence-par-pa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.8 : Les noms officiels des pays dont la capitale commence par "Pa"</h3>
+
+<blockquote>
+<p>//country[substring(capital,1, 2)="Pa"]/name/official/text()</p>
+</blockquote>
+
+<p><strong>Un équivalent intéressant est le suivant :</strong></p>
+
+<blockquote>
+<p>//country[starts-with(capital, "Pa")]/name/official/text()</p>
+</blockquote>
+
+<pre><code>American Samoa
+French Republic
+Federated States of Micronesia
+Republic of Panama
+</code></pre>
+
+<h3>
+<a id="user-content-q19--les-sous-continents-subregion-sans-doublons" class="anchor" href="#q19--les-sous-continents-subregion-sans-doublons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1.9 : Les sous-continents (subregion) sans doublons</h3>
+
+<blockquote>
+<p>//subregion[not(. = ../following-sibling::country/subregion )]</p>
+</blockquote>
+
+<p><strong><g-emoji alias="warning" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" ios-version="6.0">⚠️</g-emoji> ATTENTION:</strong> On peut également utiliser <code>preceding-sibling</code> mais cela <strong>change l'ordre du result set fourni par XPath</strong>.</p>
+
+<p><strong>Petite explication pour nos révisions de DS:</strong> dans ce critère, on sélectionne les subregions (.) qui ne sont pas égales à une autre subregion suivante (../following-sibling::country/subregion)</p>
+
+<pre><code>[vide]
+Western Europe
+Australia and New Zealand
+Southern Asia
+Micronesia
+</code></pre>
+
+<h2>
+<a id="user-content-2-mise-à-jour-de-linstance-xml-dtd" class="anchor" href="#2-mise-%C3%A0-jour-de-linstance-xml-dtd" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Mise à jour de l'instance [XML, DTD]</h2>
+
+<p>L'élément concerné est le noeud <code>languages</code>, fichier DTD modifié à la ligne <strong>9</strong></p>
+
+<p>Pour m'assurer que le document est valide, nous avons utilisé les fonctions de vérification de Editix (via <code>CTRL+K</code>)</p>
+
+<h2>
+<a id="user-content-3-mise-en-forme-du-corpus-des-pays-du-monde-xslt" class="anchor" href="#3-mise-en-forme-du-corpus-des-pays-du-monde-xslt" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Mise en forme du corpus des pays du monde [XSLT]</h2>
+
+<p>Veuillez consulter le fichier <code>countries_TP.xml</code> fourni dans ce dossier. La génération HTML de ce fichier est également disponible sous le nom <code>countries_TP.html</code>. <code>resultatTP_attendu.html</code> représente le résultat fourni et demandé par le TP.</p>
+
+<h1>
+<a id="user-content-partie-ii-xquery" class="anchor" href="#partie-ii-xquery" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Partie II: XQuery</h1>
+
+<h3>
+<a id="user-content-q1--retournez-les-noms-officiels-des-pays-en-ordre-alphabétique" class="anchor" href="#q1--retournez-les-noms-officiels-des-pays-en-ordre-alphab%C3%A9tique" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q1 : Retournez les noms officiels des pays en ordre alphabétique.</h3>
+
+<div class="highlight highlight-source-xq"><pre>&lt;nom_pays&gt;{
+  <span class="pl-k">for</span> $c <span class="pl-k">in</span> //country/name/official
+      <span class="pl-k">order</span> <span class="pl-k">by</span> $c
+      <span class="pl-k">return</span> &lt;nom&gt;{<span class="pl-c1">data</span>($c)}&lt;/nom&gt;
+  }
+&lt;/nom_pays&gt;</pre></div>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">nom_pays</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;American Samoa&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Anguilla&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Antarctica&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Antigua and Barbuda&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Arab Republic of Egypt&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Argentine Republic&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Aruba&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Bailiwick of Guernsey&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Bailiwick of Jersey&lt;/<span class="pl-ent">nom</span>&gt;
+  ...
+&lt;/<span class="pl-ent">nom_pays</span>&gt;</pre></div>
+
+<h3>
+<a id="user-content-q2--retournez-les-noms-des-pays-en-français" class="anchor" href="#q2--retournez-les-noms-des-pays-en-fran%C3%A7ais" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q2 : Retournez les noms des pays en français</h3>
+
+<p><em>NB: Nous avons décidé de prendre les noms officiels en français, l'énoncé nous laissant le libre choix. Les noms sont également triés par ordre alphabétique.</em></p>
+
+<div class="highlight highlight-source-xq"><pre>&lt;nom_pays&gt;{
+  <span class="pl-k">for</span> $c <span class="pl-k">in</span> //country/name/native_name[@lang=<span class="pl-s">"fra"</span>]/official
+    <span class="pl-k">order</span> <span class="pl-k">by</span> $c
+      <span class="pl-k">return</span> &lt;nom&gt;{<span class="pl-c1">data</span>($c)}&lt;/nom&gt;
+  }
+&lt;/nom_pays&gt;</pre></div>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">nom_pays</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Bailliage de Guernesey&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Bailliage de Jersey&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Canada&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Collectivité de Saint-Barthélemy&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Collectivité territoriale de Saint-Pierre-et-Miquelon&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Confédération suisse&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Département de Mayotte&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Grand-Duché de Luxembourg&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Guadeloupe&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Guyanes&lt;/<span class="pl-ent">nom</span>&gt;
+  ...
+&lt;/<span class="pl-ent">nom_pays</span>&gt;  </pre></div>
+
+<h3>
+<a id="user-content-q3--retournez-les-républiques" class="anchor" href="#q3--retournez-les-r%C3%A9publiques" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q3 : Retournez les républiques</h3>
+
+<p><em>NB : Les noms sont triés par ordre alphabétique.</em></p>
+
+<div class="highlight highlight-source-xq"><pre>&lt;nom_pays&gt;{
+  <span class="pl-k">for</span> $c <span class="pl-k">in</span> //country/name/official[<span class="pl-k">contains</span>(<span class="pl-c1">lower-case</span>(<span class="pl-k">text</span>()), <span class="pl-s">"republic"</span>)]
+    <span class="pl-k">order</span> <span class="pl-k">by</span> $c
+      <span class="pl-k">return</span> &lt;nom&gt;{<span class="pl-c1">data</span>($c)}&lt;/nom&gt;
+  }
+&lt;/nom_pays&gt;</pre></div>
+
+<p><em>NB: Afin de ne pas avoir de problèmes avec la casse, on convertit le nom du pays entièrement en minuscule pour le comparer avec "republic"</em></p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">nom_pays</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Arab Republic of Egypt&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Argentine Republic&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Bolivarian Republic of Venezuela&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Central African Republic&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Co-operative Republic of Guyana&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Czech Republic&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Democratic People's Republic of Korea&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Democratic Republic of São Tomé and Príncipe&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Democratic Republic of Timor-Leste&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Democratic Republic of the Congo&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Democratic Socialist Republic of Sri Lanka&lt;/<span class="pl-ent">nom</span>&gt;
+  &lt;<span class="pl-ent">nom</span>&gt;Dominican Republic&lt;/<span class="pl-ent">nom</span>&gt;
+  ...
+&lt;/<span class="pl-ent">nom_pays</span>&gt;</pre></div>
+
+<h3>
+<a id="user-content-q4--affichez-les-appelations-alternatives-altspellings-des-pays-qui-ne-se-trouvent-pas-parmi-les-noms-de-ce-pays-officiels-ou-natifs" class="anchor" href="#q4--affichez-les-appelations-alternatives-altspellings-des-pays-qui-ne-se-trouvent-pas-parmi-les-noms-de-ce-pays-officiels-ou-natifs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q4 : Affichez les appelations alternatives (altSpellings) des pays qui ne se trouvent pas parmi les noms de ce pays (officiels ou natifs).</h3>
+
+<div class="highlight highlight-source-xq"><pre>&lt;nom_pays&gt;{
+  <span class="pl-k">for</span> $c <span class="pl-k">in</span> //country
+    <span class="pl-k">for</span> $d <span class="pl-k">in</span> $c/altSpellings
+    <span class="pl-k">where</span> $d != $c/name/native_name/official <span class="pl-k">and</span> $d != $c/name/official
+    <span class="pl-k">return</span>  &lt;pays <span class="pl-e">nom</span><span class="pl-s1">=</span><span class="pl-s">"<span class="pl-s1">{$c/name/official}</span>"</span>&gt;
+    &lt;nomAlternatif_different_des_noms&gt;{<span class="pl-c1">data</span>($d)}&lt;/nomAlternatif_different_des_noms&gt;
+    &lt;/pays&gt;
+  }
+&lt;/nom_pays&gt;</pre></div>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">nom_pays</span>&gt;
+  &lt;<span class="pl-ent">pays</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Aruba<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;AW&lt;/<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;
+  &lt;/<span class="pl-ent">pays</span>&gt;
+  &lt;<span class="pl-ent">pays</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Islamic Republic of Afghanistan<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;AF&lt;/<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;
+  &lt;/<span class="pl-ent">pays</span>&gt;
+  &lt;<span class="pl-ent">pays</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Islamic Republic of Afghanistan<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;Afġānistān&lt;/<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;
+  &lt;/<span class="pl-ent">pays</span>&gt;
+  &lt;<span class="pl-ent">pays</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Republic of Angola<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;AO&lt;/<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;
+  &lt;/<span class="pl-ent">pays</span>&gt;
+  &lt;<span class="pl-ent">pays</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Republic of Angola<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;ʁɛpublika de an'ɡɔla&lt;/<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;
+  &lt;/<span class="pl-ent">pays</span>&gt;
+  &lt;<span class="pl-ent">pays</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Anguilla<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;AI&lt;/<span class="pl-ent">nomAlternatif_different_des_noms</span>&gt;
+  &lt;/<span class="pl-ent">pays</span>&gt;
+  ...
+&lt;/<span class="pl-ent">nom_pays</span>&gt;</pre></div>
+
+<h3>
+<a id="user-content-q5--pour-chaque-continent--donnez-le-nombre-de-pays-le-pays-avec-le-plus-grande-superficie-ainsi-que-les-langues-parlés-sur-ce-continent-sans-doublons" class="anchor" href="#q5--pour-chaque-continent--donnez-le-nombre-de-pays-le-pays-avec-le-plus-grande-superficie-ainsi-que-les-langues-parl%C3%A9s-sur-ce-continent-sans-doublons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q5 : Pour chaque continent : donnez le nombre de pays, le pays avec le plus grande superficie ainsi que les langues parlés sur ce continent sans doublons.</h3>
+
+<div class="highlight highlight-source-xq"><pre>&lt;infosContinents&gt;{
+  <span class="pl-k">for</span> $c <span class="pl-k">in</span> <span class="pl-c1">distinct-values</span>(//country/region)
+      <span class="pl-k">let</span> $countries := //country[region = $c]
+      <span class="pl-k">let</span> $plusGrandPays := //country[area = <span class="pl-c1">max</span>($countries/area)]
+      <span class="pl-k">return</span> &lt;continent <span class="pl-e">nom</span><span class="pl-s1">=</span><span class="pl-s">"<span class="pl-s1">{$c}</span>"</span> <span class="pl-e">nbPays</span><span class="pl-s1">=</span><span class="pl-s">"<span class="pl-s1">{<span class="pl-k">count</span>($countries)}</span>"</span>&gt;
+      &lt;infos&gt;
+        &lt;plusGrandPays <span class="pl-e">superficie</span><span class="pl-s1">=</span><span class="pl-s">"<span class="pl-s1">{<span class="pl-c1">number</span>($plusGrandPays/area)}</span>"</span>&gt;{<span class="pl-c1">data</span>($plusGrandPays/name/official)}&lt;/plusGrandPays&gt;
+        &lt;languesParles&gt;{
+          <span class="pl-k">for</span> $d <span class="pl-k">in</span> <span class="pl-c1">distinct-values</span>($countries/languages/*)
+          <span class="pl-k">return</span> <span class="pl-c1">data</span>($d) 
+        }&lt;/languesParles&gt;
+      &lt;/infos&gt;
+      &lt;/continent&gt;
+  }
+&lt;/infosContinents&gt;</pre></div>
+
+<p><em>Note: si on avait utilisé <code>let $countries := //country[region/text() = $c]</code>, les données pour les pays sans continents auraient été erronées.</em></p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">infosContinents</span>&gt;
+  &lt;<span class="pl-ent">continent</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Americas<span class="pl-pds">"</span></span> <span class="pl-e">nbPays</span>=<span class="pl-s"><span class="pl-pds">"</span>56<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">infos</span>&gt;
+      &lt;<span class="pl-ent">plusGrandPays</span> <span class="pl-e">superficie</span>=<span class="pl-s"><span class="pl-pds">"</span>9.98467E6<span class="pl-pds">"</span></span>&gt;Canada&lt;/<span class="pl-ent">plusGrandPays</span>&gt;
+      &lt;<span class="pl-ent">languesParles</span>&gt;Dutch Papiamento English Guaraní Spanish French Belizean Creole Aymara Quechua Portuguese Greenlandic Haitian Creole Jamaican Patois&lt;/<span class="pl-ent">languesParles</span>&gt;
+    &lt;/<span class="pl-ent">infos</span>&gt;
+  &lt;/<span class="pl-ent">continent</span>&gt;
+  &lt;<span class="pl-ent">continent</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Asia<span class="pl-pds">"</span></span> <span class="pl-e">nbPays</span>=<span class="pl-s"><span class="pl-pds">"</span>50<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">infos</span>&gt;
+      &lt;<span class="pl-ent">plusGrandPays</span> <span class="pl-e">superficie</span>=<span class="pl-s"><span class="pl-pds">"</span>9.706961E6<span class="pl-pds">"</span></span>&gt;People's Republic of China&lt;/<span class="pl-ent">plusGrandPays</span>&gt;
+      &lt;<span class="pl-ent">languesParles</span>&gt;Dari Pashto Turkmen Arabic Armenian Russian Azerbaijani Bengali Malay Dzongkha Chinese Georgian English Indonesian Hindi Tamil Persian Aramaic Sorani Hebrew Japanese Kazakh Kyrgyz Khmer Korean Lao French Sinhala Portuguese Maldivian Burmese Mongolian Nepali Urdu Filipino Thai Tajik Tetum Turkish Uzbek Vietnamese&lt;/<span class="pl-ent">languesParles</span>&gt;
+    &lt;/<span class="pl-ent">infos</span>&gt;
+  &lt;/<span class="pl-ent">continent</span>&gt;
+  &lt;<span class="pl-ent">continent</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Africa<span class="pl-pds">"</span></span> <span class="pl-e">nbPays</span>=<span class="pl-s"><span class="pl-pds">"</span>58<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">infos</span>&gt;
+      &lt;<span class="pl-ent">plusGrandPays</span> <span class="pl-e">superficie</span>=<span class="pl-s"><span class="pl-pds">"</span>2.381741E6<span class="pl-pds">"</span></span>&gt;People's Democratic Republic of Algeria&lt;/<span class="pl-ent">plusGrandPays</span>&gt;
+      &lt;<span class="pl-ent">languesParles</span>&gt;Portuguese French Kirundi English Tswana Sango Kikongo Lingala Tshiluba Swahili Arabic Comorian Tigrinya Berber Hassaniya Spanish Amharic Sotho Malagasy Mauritian Creole Chewa Afrikaans German Herero Khoekhoe Kwangali Lozi Ndonga Kinyarwanda Somali Swazi Seychellois Creole Southern Ndebele Northern Sotho Southern Sotho Tsonga Venda Xhosa Zulu Chibarwe Kalanga Khoisan Ndau Northern Ndebele Shona Tonga Zimbabwean Sign Language&lt;/<span class="pl-ent">languesParles</span>&gt;
+    &lt;/<span class="pl-ent">infos</span>&gt;
+  &lt;/<span class="pl-ent">continent</span>&gt;
+  &lt;<span class="pl-ent">continent</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Europe<span class="pl-pds">"</span></span> <span class="pl-e">nbPays</span>=<span class="pl-s"><span class="pl-pds">"</span>53<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">infos</span>&gt;
+      &lt;<span class="pl-ent">plusGrandPays</span> <span class="pl-e">superficie</span>=<span class="pl-s"><span class="pl-pds">"</span>1.7098242E7<span class="pl-pds">"</span></span>&gt;Russian Federation&lt;/<span class="pl-ent">plusGrandPays</span>&gt;
+      &lt;<span class="pl-ent">languesParles</span>&gt;Swedish Albanian Catalan Austro-Bavarian German German French Dutch Bulgarian Bosnian Croatian Serbian Belarusian Russian Swiss German Italian Romansh Greek Turkish Czech Slovak Danish Basque Galician Occitan Spanish Estonian Finnish Faroese English Guernésiais Hungarian Manx Irish Icelandic Sardinian Jèrriais Lithuanian Luxembourgish Latvian Moldavian Macedonian Maltese Montenegrin Norwegian Nynorsk Norwegian Bokmål Sami Polish Portuguese Romanian Norwegian Slovene Ukrainian Latin&lt;/<span class="pl-ent">languesParles</span>&gt;
+    &lt;/<span class="pl-ent">infos</span>&gt;
+  &lt;/<span class="pl-ent">continent</span>&gt;
+  &lt;<span class="pl-ent">continent</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span>Oceania<span class="pl-pds">"</span></span> <span class="pl-e">nbPays</span>=<span class="pl-s"><span class="pl-pds">"</span>27<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">infos</span>&gt;
+      &lt;<span class="pl-ent">plusGrandPays</span> <span class="pl-e">superficie</span>=<span class="pl-s"><span class="pl-pds">"</span>7.692024E6<span class="pl-pds">"</span></span>&gt;Commonwealth of Australia&lt;/<span class="pl-ent">plusGrandPays</span>&gt;
+      &lt;<span class="pl-ent">languesParles</span>&gt;English Samoan Cook Islands Māori Fijian Fiji Hindi Chamorro Spanish Gilbertese Marshallese Carolinian French Norfuk Niuean Nauru Māori New Zealand Sign Language Palauan Hiri Motu Tok Pisin Tokelauan Tongan Tuvaluan Bislama&lt;/<span class="pl-ent">languesParles</span>&gt;
+    &lt;/<span class="pl-ent">infos</span>&gt;
+  &lt;/<span class="pl-ent">continent</span>&gt;
+  &lt;<span class="pl-ent">continent</span> <span class="pl-e">nom</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">nbPays</span>=<span class="pl-s"><span class="pl-pds">"</span>4<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">infos</span>&gt;
+      &lt;<span class="pl-ent">plusGrandPays</span> <span class="pl-e">superficie</span>=<span class="pl-s"><span class="pl-pds">"</span>1.4E7<span class="pl-pds">"</span></span>&gt;Antarctica&lt;/<span class="pl-ent">plusGrandPays</span>&gt;
+      &lt;<span class="pl-ent">languesParles</span>&gt;French Norwegian English&lt;/<span class="pl-ent">languesParles</span>&gt;
+    &lt;/<span class="pl-ent">infos</span>&gt;
+  &lt;/<span class="pl-ent">continent</span>&gt;
+&lt;/<span class="pl-ent">infosContinents</span>&gt;</pre></div>
+
+<h3>
+<a id="user-content-q6--comptez-le-nombre-de-langues-pour-chaque-pays-à-laide-dune-fonction-appelée--localcomptelangues-prenant-en-paramètre-un-noeud-country-et-retournant-le-nombre-de-langues-parlées" class="anchor" href="#q6--comptez-le-nombre-de-langues-pour-chaque-pays-%C3%A0-laide-dune-fonction-appel%C3%A9e--localcomptelangues-prenant-en-param%C3%A8tre-un-noeud-country-et-retournant-le-nombre-de-langues-parl%C3%A9es" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q6 : Comptez le nombre de langues pour chaque pays à l'aide d'une fonction appelée : local:compteLangues, prenant en paramètre un noeud country et retournant le nombre de langues parlées.</h3>
+
+<div class="highlight highlight-source-xq"><pre><span class="pl-k">declare</span> <span class="pl-k">function</span> <span class="pl-c1">local:compteLangues</span>($country <span class="pl-k">as</span> <span class="pl-k">node</span>())
+<span class="pl-k">as</span> xs:decimal?
+{
+  <span class="pl-k">let</span> $nbLangues := <span class="pl-k">count</span>($country/languages/*)
+  <span class="pl-k">return</span> ($nbLangues)
+};
+
+&lt;nblangues&gt;{
+<span class="pl-k">for</span> $c <span class="pl-k">in</span> //country
+  <span class="pl-k">return</span> <span class="pl-k">element</span> {<span class="pl-c1">lower-case</span>($c/cca3)} {
+    &lt;nom&gt;{<span class="pl-c1">data</span>($c/name/official)}&lt;/nom&gt;,
+    &lt;nblangues&gt;{<span class="pl-c1">local:compteLangues</span>($c)}&lt;/nblangues&gt;
+  }
+}
+&lt;/nblangues&gt;</pre></div>
+
+<p><em>Il existe une version alternative, suffisamment intéressante à notre avis pour fournir le code dans ce compte-rendu. Le voici :</em></p>
+
+<div class="highlight highlight-source-xq"><pre><span class="pl-k">declare</span> <span class="pl-k">function</span> <span class="pl-c1">local:compteLangues</span>($country <span class="pl-k">as</span> <span class="pl-k">node</span>())
+<span class="pl-k">as</span> xs:decimal?
+{
+  <span class="pl-k">let</span> $nbLangues := <span class="pl-k">count</span>($country/languages/*)
+  <span class="pl-k">return</span> ($nbLangues)
+};
+
+&lt;nblangues&gt;{
+<span class="pl-k">for</span> $c <span class="pl-k">in</span> //country
+  <span class="pl-k">return</span> <span class="pl-k">element</span> {<span class="pl-c1">lower-case</span>($c/cca3)} {
+    <span class="pl-k">element</span> nom {<span class="pl-c1">data</span>($c/name/official)},
+    <span class="pl-k">element</span> nblangues {<span class="pl-c1">local:compteLangues</span>($c)}
+  }
+}
+&lt;/nblangues&gt;</pre></div>
+
+<p><strong>Dans un noeud généré avec <code>element</code>, il est nécessaire de séparer chaque noeud enfant par des virgules, MÊME s'ils sont de la forme <code>&lt;noeud&gt;&lt;/noeud&gt;</code>.</strong></p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">nblangues</span>&gt;
+  &lt;<span class="pl-ent">abw</span>&gt;
+    &lt;<span class="pl-ent">nom</span>&gt;Aruba&lt;/<span class="pl-ent">nom</span>&gt;
+    &lt;<span class="pl-ent">nblangues</span>&gt;2&lt;/<span class="pl-ent">nblangues</span>&gt;
+  &lt;/<span class="pl-ent">abw</span>&gt;
+  &lt;<span class="pl-ent">afg</span>&gt;
+    &lt;<span class="pl-ent">nom</span>&gt;Islamic Republic of Afghanistan&lt;/<span class="pl-ent">nom</span>&gt;
+    &lt;<span class="pl-ent">nblangues</span>&gt;3&lt;/<span class="pl-ent">nblangues</span>&gt;
+  &lt;/<span class="pl-ent">afg</span>&gt;
+  &lt;<span class="pl-ent">ago</span>&gt;
+    &lt;<span class="pl-ent">nom</span>&gt;Republic of Angola&lt;/<span class="pl-ent">nom</span>&gt;
+    &lt;<span class="pl-ent">nblangues</span>&gt;1&lt;/<span class="pl-ent">nblangues</span>&gt;
+  &lt;/<span class="pl-ent">ago</span>&gt;
+  &lt;<span class="pl-ent">aia</span>&gt;
+    &lt;<span class="pl-ent">nom</span>&gt;Anguilla&lt;/<span class="pl-ent">nom</span>&gt;
+    &lt;<span class="pl-ent">nblangues</span>&gt;1&lt;/<span class="pl-ent">nblangues</span>&gt;
+  &lt;/<span class="pl-ent">aia</span>&gt;
+  &lt;<span class="pl-ent">ala</span>&gt;
+    &lt;<span class="pl-ent">nom</span>&gt;Åland Islands&lt;/<span class="pl-ent">nom</span>&gt;
+    &lt;<span class="pl-ent">nblangues</span>&gt;1&lt;/<span class="pl-ent">nblangues</span>&gt;
+  &lt;/<span class="pl-ent">ala</span>&gt;
+  &lt;<span class="pl-ent">alb</span>&gt;
+    &lt;<span class="pl-ent">nom</span>&gt;Republic of Albania&lt;/<span class="pl-ent">nom</span>&gt;
+    &lt;<span class="pl-ent">nblangues</span>&gt;1&lt;/<span class="pl-ent">nblangues</span>&gt;
+  &lt;/<span class="pl-ent">alb</span>&gt;
+  &lt;<span class="pl-ent">and</span>&gt;
+    &lt;<span class="pl-ent">nom</span>&gt;Principality of Andorra&lt;/<span class="pl-ent">nom</span>&gt;
+    &lt;<span class="pl-ent">nblangues</span>&gt;1&lt;/<span class="pl-ent">nblangues</span>&gt;
+  &lt;/<span class="pl-ent">and</span>&gt;
+  ...
+&lt;/<span class="pl-ent">nblangues</span>&gt;</pre></div>
+
+<h1>
+<a id="user-content-partie-iii--ajax--dom" class="anchor" href="#partie-iii--ajax--dom" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Partie III : Ajax &amp; DOM</h1>
+
+<p>Cette partie a été réalisée dans le document <code>PartieAjaxDOM.html</code>.</p>
+
+<p>Comme bonus, nous avons amélioré la mise en page des événements sous forme d'un tableau (bouton 4 uniquement) et via l'utilisation de Bootstrap.</p>
+</article></body></html>

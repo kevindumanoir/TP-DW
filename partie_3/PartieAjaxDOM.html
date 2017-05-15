@@ -1,0 +1,245 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <title>
+            TP 3IF Ajax
+        </title>
+        <meta content="Elöd EGYED-ZSIGMOND" name="author"/>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript">
+            //fonctions javascript
+// <![CDATA[      
+  
+		  function recupererPremierEnfantDeTypeNode(n) {
+			x = n.firstChild;
+			while ( x.nodeType != 1 ) { // Test if x is an element node (and not a text node or other)
+			  x = x.nextSibling;
+			}
+			return x;
+		  }
+		//change le contenu de l'élement avec l'id "nom" avec la chaine de caractéres en paramètre	  
+		  function setNom( nom ) {
+			var elementHtmlARemplir = window.document.getElementById("id_nom_a_remplacer");
+			elementHtmlARemplir.innerHTML = nom;
+		  }
+		
+		//charge le fichier XML se trouvant à l'URL relative donné dans le paramètreet le retourne
+        function chargerHttpXML(xmlDocumentUrl) { 
+          
+          var httpAjax;
+          
+          httpAjax = window.XMLHttpRequest ?
+            new XMLHttpRequest() :
+            new ActiveXObject('Microsoft.XMLHTTP');
+          
+          if (httpAjax.overrideMimeType) {
+            httpAjax.overrideMimeType('text/xml');
+          }
+          
+          //chargement du fichier XML à l'aide de XMLHttpRequest synchrone (le 3° paramètre est défini à false)
+          httpAjax.open('GET', xmlDocumentUrl, false);
+          httpAjax.send();
+          
+          return httpAjax.responseXML;
+        }
+  
+        // Charge le fichier JSON se trouvant à l'URL donnée en paramètre et le retourne
+        function chargerHttpJSON(jsonDocumentUrl) {
+
+            var httpAjax;
+
+            httpAjax = window.XMLHttpRequest ?
+                        new XMLHttpRequest() :
+                        new ActiveXObject('Microsoft.XMLHTTP');
+
+                if (httpAjax.overrideMimeType) {
+                    httpAjax.overrideMimeType('application/json');
+                }
+
+                // chargement du fichier JSON à l'aide de XMLHttpRequest synchrone (le 3° paramètre est défini à false)
+                httpAjax.open('GET', jsonDocumentUrl, false);
+                httpAjax.send();
+
+                var responseData = eval("(" + httpAjax.responseText + ")");
+
+                return responseData;
+            } 
+ 
+
+  function Bouton2_ajaxBibliographie(xmlDocumentUrl, xslDocumentUrl, newElementName) {
+	  
+		  var xsltProcessor = new XSLTProcessor();
+
+		  // Chargement du fichier XSL à l'aide de XMLHttpRequest synchrone 
+		  var xslDocument = chargerHttpXML(xslDocumentUrl); 
+
+		  // Importation du .xsl
+		  xsltProcessor.importStylesheet(xslDocument);
+
+		  // Chargement du fichier XML à l'aide de XMLHttpRequest synchrone 
+		  var xmlDocument = chargerHttpXML(xmlDocumentUrl);
+
+		  // Création du document XML transformé par le XSL
+		  var newXmlDocument = xsltProcessor.transformToDocument(xmlDocument);
+
+		  // Recherche du parent (dont l'id est "here") de l'élément à remplacer dans le document HTML courant
+		  var elementHtmlParent = window.document.getElementById("ajax_content");
+		  // Premier élément fils du parent
+		  var elementHtmlARemplacer = recupererPremierEnfantDeTypeNode(elementHtmlParent);
+		  // Premier élément "elementName" du nouveau document (par exemple, "ul", "table"...)
+		  var elementAInserer = newXmlDocument.getElementsByTagName(newElementName)[0];
+		  
+		  // Remplacement de l'élément
+		  elementHtmlParent.replaceChild(elementAInserer,elementHtmlARemplacer);
+
+    }
+
+	 /////////////////////////////////////////////////////////////////////////////////////
+
+	 function TraitementOMDBEvent(conteneurList) {
+	 	if (!conteneurList.getAttribute('data-done')) {
+	 		var	champsDemandes = {
+	 			'Year' : "Année",
+	 			'Rated' : "Âge requis",
+	 			'Released' : "Date de première diffusion",
+	 			'Runtime' : "Durée",
+	 			'Genre' : "Genre",
+	 			'Language' : "Langue",
+	 			'Country' : "Pays",
+	 			'imdbRating' : "Score IMDB",
+	 			'imdbVotes' : "Nombre de votes IMDB"
+	 		};
+
+	 		liTitre = recupererPremierEnfantDeTypeNode(conteneurList),
+	 		rawTitle = liTitre.innerText.replace('Titre : ', ''),
+
+	 		url = 'http://www.omdbapi.com/?type=series&t='+rawTitle,
+
+	 		dataJson = chargerHttpJSON(url);
+
+	 		if (dataJson && typeof dataJson == 'object') {
+	 			for (var i in champsDemandes) {
+	 				var nouvelleInformation = document.createElement('td');
+
+	 				nouvelleInformation.innerText = dataJson[i];
+	 				conteneurList.appendChild(nouvelleInformation);
+	 			}
+
+	 			if (dataJson.Poster) {
+	 				var nouvelleInformation = document.createElement('td');
+	 				nouvelleInformation.style.listStyleType = 'none';
+
+	 				var nouvelleImage = document.createElement('img');
+	 				nouvelleImage.src = dataJson.Poster;
+
+	 				nouvelleInformation.appendChild(nouvelleImage);
+	 				conteneurList.appendChild(nouvelleInformation);
+
+	 			}
+	 			
+	 			conteneurList.setAttribute('data-done', true);
+	 		}
+	 	}
+	 }
+
+	 /////////////////////////////////////////////////////////////////////////////////////
+
+	 function ActionsBouton1(bouton) {
+	 	document.body.style.backgroundColor = 'royalblue';
+		bouton.style.color = 'white';
+	 }
+
+	 function ActionsBouton2(boutonAfficher) {
+  		Bouton2_ajaxBibliographie('calendar-short.xml','calendar-eventlist-workaholics.xsl','ul');
+  		boutonAfficher.style.display = 'initial';
+	 }
+
+	 function ActionsBouton3() {
+	 	var conteneurList = document.querySelector('#ajax_content > ul');
+  		TraitementOMDBEvent(conteneurList);
+	 }
+
+	 function ActionsBouton4() {
+	 	Bouton2_ajaxBibliographie('calendar-short.xml','calendar-eventlist.xsl','table');
+
+		var domEvents = document.querySelectorAll('#ajax_content > table tr');
+		domEvents = [].slice.call(domEvents, 1); // On enlève le premier élément <tr>, qui correspond au header
+
+
+		for (var i=0; i<domEvents.length; i++) {
+			TraitementOMDBEvent(domEvents[i]);
+		}
+	 }
+
+      // ]]>
+        </script>
+        <style type="text/css">
+        	div.row {
+        		margin-bottom: 10px;
+        	}
+
+        	img {
+        		width: 80px;
+        	}
+        </style>
+    </head>
+</html>
+<body>
+	<div class="container text-center">
+		<h1>Partie 3 : Ajax & DOM</h1>
+        <p>
+            Résultat de TP réalisé par Axel CÉARD et Kévin DUMANOIR (B3442)- INSA Lyon - 2017
+        </p>
+
+		<div class="row">
+			<div class="col-md-6 col-md-12">
+        		<input id="myButton1" name="button" class="btn btn-default" type="button" value="#1 - Changer couleur fond + bouton"/>
+			</div>
+			<div class="col-md-6 col-md-12">
+				<input id="myButton4" name="button4" class="btn btn-default" type="button" value="#4 - Récupérer la liste de tous les événéments"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-12">
+        		<input id="myButton2" name="button2" class="btn btn-default" type="button" value="#2 - Afficher informations Workaholics"/>
+			</div>
+			<div class="col-md-6 col-md-12">
+        		<input id="myButton3" name="button3" class="btn btn-default" style="display: none;" type="button" value="#3 - Récupérer informations OMDB"/>
+			</div>
+		</div>
+	</div> 
+    <div id="ajax_content">
+        <p style="color: red; font-weight: bold;">
+            Cet élément va être remplacé par une bibliographie en XML mise en forme par une feuille de style XSLT...
+        </p>
+    </div>
+    <script type="text/javascript">
+        var bouton1 = document.getElementById('myButton1'),
+  			bouton2 = document.getElementById('myButton2'),
+  			bouton3 = document.getElementById('myButton3'),
+  			bouton4 = document.getElementById('myButton4');
+
+  			bouton1.onclick = function(event) {
+  				event.preventDefault();
+  				ActionsBouton1(this);
+  			} 
+		
+  			bouton2.onclick = function(event) {
+  				event.preventDefault();
+  				ActionsBouton2(bouton3);
+  			} 
+		
+  			bouton3.onclick = function(event) {
+  				event.preventDefault();
+  				ActionsBouton3();
+  			}
+		
+  			bouton4.onclick = function(event) {
+  				event.preventDefault();
+		
+				ActionsBouton4();
+		
+  			}
+    </script>
+</body>
